@@ -21,6 +21,7 @@ class RegistrationTest(BaseTest):
         self.assertEqual(create_an_account_page.get_email(), TestData.email, "Mail differs from entered previously!")
         # 7. Wpisz hasło
         create_an_account_page.enter_password(TestData.password)
+        # 8. Wybierz datę urodzenia
 
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć

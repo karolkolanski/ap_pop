@@ -35,6 +35,9 @@ class CreateAnAccountPage(BasePage):
         # Wpisz w to pole podane hasło
         password_input.send_keys(password)
 
+    def choose_birthdate(self, date):
+        pass
+
     def get_email(self):
         """
         Returns e-mail entered in an input below Last Name
