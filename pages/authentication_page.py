@@ -1,11 +1,18 @@
 from pages.base_page import BasePage
+from pages.locators import AuthenticationPageLocators
 
 class AuthenticationPage(BasePage):
     """
     Authentication Page Object
     """
     def create_account_with_email(self, email):
-        pass
+        # Find Create an Account E-mail input
+        el = self.driver.find_element(*AuthenticationPageLocators.CREATE_AN_ACCOUNT_EMAIL)
+        # Fill this input with email
+        el.send_keys(email)
+        # Find Create an Account button
+        # Click this button
+        # return CreateAnAccountPage instance
 
     def log_in(self, email, password):
         pass
