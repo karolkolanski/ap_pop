@@ -1,5 +1,7 @@
-import unittest
+from pages.home_page import HomePage
+
 from selenium import webdriver
+import unittest
 
 class BaseTest(unittest.TestCase):
     """
@@ -9,6 +11,9 @@ class BaseTest(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get("http://automationpractice.com/")
+        # Stworzyć instancję klasy HomePage
+        # Aby uzyskać dostęp do mechanizmów tej strony
+        self.home_page = HomePage(self.driver)
 
     def tearDown(self):
         self.driver.quit()
