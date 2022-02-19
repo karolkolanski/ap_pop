@@ -1,4 +1,5 @@
 from pages.base_page import BasePage
+from pages.locators import HomePageLocators
 
 class HomePage(BasePage):
     """
@@ -9,8 +10,9 @@ class HomePage(BasePage):
         Clicks Sign In link
         """
         # Zlokalizuj Sign In
+        el = self.driver.find_element(*HomePageLocators.SIGN_IN_LINK)
         # Kliknij
-        pass
+        el.click()
 
     def _verify_page(self):
         """
