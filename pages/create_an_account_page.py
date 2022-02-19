@@ -20,7 +20,11 @@ class CreateAnAccountPage(BasePage):
         pass
 
     def enter_last_name(self, last_name):
-        pass
+        """
+        Enters last name
+        """
+        el = self.driver.find_element(*CreateAnAccountPageLocators.LAST_NAME)
+        el.send_keys(last_name)
 
     def _verify_page(self):
         """

@@ -15,6 +15,8 @@ class RegistrationTest(BaseTest):
         create_an_account_page = authentication_page.create_account_with_email(TestData.email)
         # 4. Wybierz płeć
         create_an_account_page.choose_gender(TestData.gender)
+        # 5. Wpisz nazwisko
+        create_an_account_page.enter_last_name(TestData.last_name)
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć
         # zauważyć co się dzieje
