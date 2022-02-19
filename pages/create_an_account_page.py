@@ -26,6 +26,15 @@ class CreateAnAccountPage(BasePage):
         el = self.driver.find_element(*CreateAnAccountPageLocators.LAST_NAME)
         el.send_keys(last_name)
 
+    def enter_password(self, password):
+        """
+        Enters password
+        """
+        # Znajdź pole
+        password_input = self.driver.find_element(*CreateAnAccountPageLocators.PASSWORD)
+        # Wpisz w to pole podane hasło
+        password_input.send_keys(password)
+
     def get_email(self):
         """
         Returns e-mail entered in an input below Last Name

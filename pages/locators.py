@@ -21,3 +21,4 @@ class CreateAnAccountPageLocators():
     GENDER_FEMALE = (By.ID, "id_gender2")
     LAST_NAME = (By.ID, "customer_lastname")
     EMAIL = (By.ID, "email")
+    PASSWORD = (By.ID, "passwd")
