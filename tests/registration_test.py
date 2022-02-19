@@ -17,6 +17,9 @@ class RegistrationTest(BaseTest):
         create_an_account_page.choose_gender(TestData.gender)
         # 5. Wpisz nazwisko
         create_an_account_page.enter_last_name(TestData.last_name)
+        # 6. Sprawdź poprawność e-maila
+        self.assertEqual(create_an_account_page.get_email(), TestData.email, "Mail differs from entered previously!")
+
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć
         # zauważyć co się dzieje

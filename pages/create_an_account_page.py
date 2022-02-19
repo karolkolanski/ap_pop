@@ -26,6 +26,13 @@ class CreateAnAccountPage(BasePage):
         el = self.driver.find_element(*CreateAnAccountPageLocators.LAST_NAME)
         el.send_keys(last_name)
 
+    def get_email(self):
+        """
+        Returns e-mail entered in an input below Last Name
+        """
+        el = self.driver.find_element(*CreateAnAccountPageLocators.EMAIL)
+        return el.get_attribute("value")
+
     def _verify_page(self):
         """
         Verifies Create an Account Page
