@@ -5,4 +5,5 @@ class RegistrationTest(BaseTest):
     Registration Tests
     """
     def test_no_name(self):
-        pass
+        # 1. Kliknij Sign In
+        self.home_page.click_sign_in()

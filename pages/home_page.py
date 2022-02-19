@@ -8,6 +8,8 @@ class HomePage(BasePage):
         """
         Clicks Sign In link
         """
+        # Zlokalizuj Sign In
+        # Kliknij
         pass
 
     def _verify_page(self):
