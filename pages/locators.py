@@ -11,3 +11,11 @@ class AuthenticationPageLocators():
     Locators used on Authentication Page
     """
     CREATE_AN_ACCOUNT_EMAIL = (By.ID, "email_create")
+    CREATE_AN_ACCOUNT_BTN = (By.ID, "SubmitCreate")
+
+class CreateAnAccountPageLocators():
+    """
+    Locators used on Create an Account Page
+    """
+    GENDER_MALE = (By.ID, "id_gender1")
+    GENDER_FEMALE = (By.ID, "id_gender2")

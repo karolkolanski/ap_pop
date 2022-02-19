@@ -1,2 +1,3 @@
 class TestData:
-    email = "marek@wp.pl"
+    email = "tester_alk@wp.pl"
+    gender = "male"

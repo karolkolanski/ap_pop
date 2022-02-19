@@ -11,6 +11,7 @@ class BaseTest(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get("http://automationpractice.com/")
+        self.driver.implicitly_wait(10)
         # Stworzyć instancję klasy HomePage
         # Aby uzyskać dostęp do mechanizmów tej strony
         self.home_page = HomePage(self.driver)
