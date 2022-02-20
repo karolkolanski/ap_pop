@@ -55,8 +55,3 @@ class RegistrationTest(BaseTest):
         # 1. Użytkownik otrzymuje komunikat „firstname is required”
         errors = ["firstname is required."]
         self.assertCountEqual(create_an_account_page.get_error_messages_visible_texts(), errors)
-
-
-        # Zatrzymaj na chwilę test na końcu, by zdążyć
-        # zauważyć co się dzieje
-        sleep(3)
