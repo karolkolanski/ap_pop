@@ -1,12 +1,17 @@
+from faker import Faker
+
+
 class TestData:
-    email = "tester_alk@wp.pl"
-    gender = "male"
-    last_name = "Nowak"
-    password = "password123"
-    birthdate = "1980-02-28"
-    address = "Kaliska 7"
-    city = "Warsaw"
-    postal_code = "62800"
-    state = "Texas"
-    phone = "123342123"
-    alias = "My home"
+    def __init__(self):
+        fake = Faker()
+        self.email = fake.email()
+        self.gender = "male"
+        self.last_name = fake.last_name()
+        self.password = "password123"
+        self.birthdate = "1980-02-28"
+        self.address = fake.address()
+        self.city = fake.city()
+        self.postal_code = fake.postalcode()
+        self.state = fake.state()
+        self.phone = "123342123"
+        self.alias = "My home"

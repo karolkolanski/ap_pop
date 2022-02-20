@@ -15,4 +15,4 @@ tests_for_run = [
 test_suite = unittest.TestSuite(tests_for_run)
 
 # Odpal testy
-unittest.TextTestRunner().run(test_suite)
+# unittest.TextTestRunner().run(test_suite)

@@ -1,4 +1,5 @@
 from pages.home_page import HomePage
+from tests.test_data import TestData
 
 from selenium import webdriver
 import unittest
@@ -15,6 +16,7 @@ class BaseTest(unittest.TestCase):
         # Stworzyć instancję klasy HomePage
         # Aby uzyskać dostęp do mechanizmów tej strony
         self.home_page = HomePage(self.driver)
+        self.test_data = TestData()
 
     def tearDown(self):
         self.driver.quit()
