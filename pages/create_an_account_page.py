@@ -1,5 +1,8 @@
+from selenium.webdriver.support.select import Select
+
 from pages.base_page import BasePage
 from pages.locators import CreateAnAccountPageLocators
+
 
 class CreateAnAccountPage(BasePage):
     """
@@ -36,7 +39,13 @@ class CreateAnAccountPage(BasePage):
         password_input.send_keys(password)
 
     def choose_birthdate(self, date):
-        pass
+        date_splitted = date.split("-")
+        year = date_splitted[0]
+        month = date_splitted[1]
+        day = date_splitted[2]
+        day_select = Select(self.driver.find_element(*CreateAnAccountPageLocators.BIRTHDATE_DAY))
+        day_select.select_by_value(day)
+
 
     def get_email(self):
         """

@@ -22,3 +22,4 @@ class CreateAnAccountPageLocators():
     LAST_NAME = (By.ID, "customer_lastname")
     EMAIL = (By.ID, "email")
     PASSWORD = (By.ID, "passwd")
+    BIRTHDATE_DAY = (By.ID, "days")
