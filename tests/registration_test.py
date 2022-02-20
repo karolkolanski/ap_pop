@@ -27,6 +27,13 @@ class RegistrationTest(BaseTest):
         self.assertEqual(create_an_account_page.get_first_name(), "")
         # 10. Sprawdź pole „Last name”
         self.assertEqual(create_an_account_page.get_last_name(), TestData.last_name)
+        # 11. Wpisz adres
+        # 12. Wpisz miasto
+        # 13. Wpisz kod pocztowy
+        # 14. Wybierz stan
+        # 15. Wpisz nr telefonu komórkowego
+        # 16. Wpisz alias adresu
+        # 17. Kliknij Register
 
 
 

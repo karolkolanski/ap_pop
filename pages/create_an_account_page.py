@@ -72,6 +72,8 @@ class CreateAnAccountPage(BasePage):
         Returns Address First Name
         """
         el = self.driver.find_element(*CreateAnAccountPageLocators.ADDRESS_FIRST_NAME)
+        # Przewinięcie do elementu
+        el.location_once_scrolled_into_view
         return el.get_attribute("value")
 
     def get_last_name(self):
