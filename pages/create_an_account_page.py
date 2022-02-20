@@ -39,6 +39,9 @@ class CreateAnAccountPage(BasePage):
         password_input.send_keys(password)
 
     def choose_birthdate(self, date):
+        """
+        Chooses Customer birthdate in YYYY-MM-DD format
+        """
         # date = "1980-02-30"
         date_splitted = date.split("-")
         # date_splitted = ["1980", "02", "30"]
@@ -63,6 +66,21 @@ class CreateAnAccountPage(BasePage):
         """
         el = self.driver.find_element(*CreateAnAccountPageLocators.EMAIL)
         return el.get_attribute("value")
+
+    def get_first_name(self):
+        """
+        Returns Address First Name
+        """
+        el = self.driver.find_element(*CreateAnAccountPageLocators.ADDRESS_FIRST_NAME)
+        return el.get_attribute("value")
+
+    def get_last_name(self):
+        """
+        Returns Address Last Name
+        """
+        el = self.driver.find_element(*CreateAnAccountPageLocators.ADDRESS_LAST_NAME)
+        return el.get_attribute("value")
+
 
     def _verify_page(self):
         """

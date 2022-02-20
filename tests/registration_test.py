@@ -23,6 +23,11 @@ class RegistrationTest(BaseTest):
         create_an_account_page.enter_password(TestData.password)
         # 8. Wybierz datę urodzenia
         create_an_account_page.choose_birthdate(TestData.birthdate)
+        # 9. Sprawdź pole „First name”
+        self.assertEqual(create_an_account_page.get_first_name(), "")
+        # 10. Sprawdź pole „Last name”
+        self.assertEqual(create_an_account_page.get_last_name(), TestData.last_name)
+
 
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć

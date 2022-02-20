@@ -19,9 +19,12 @@ class CreateAnAccountPageLocators():
     """
     GENDER_MALE = (By.ID, "id_gender1")
     GENDER_FEMALE = (By.ID, "id_gender2")
+    FIRST_NAME = (By.ID, "customer_firstname")
     LAST_NAME = (By.ID, "customer_lastname")
     EMAIL = (By.ID, "email")
     PASSWORD = (By.ID, "passwd")
     BIRTHDATE_DAY = (By.ID, "days")
     BIRTHDATE_MONTH = (By.ID, "months")
     BIRTHDATE_YEAR = (By.ID, "years")
+    ADDRESS_FIRST_NAME = (By.ID, "firstname")
+    ADDRESS_LAST_NAME = (By.ID, "lastname")
