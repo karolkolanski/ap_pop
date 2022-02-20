@@ -22,6 +22,7 @@ class RegistrationTest(BaseTest):
         # 7. Wpisz hasło
         create_an_account_page.enter_password(TestData.password)
         # 8. Wybierz datę urodzenia
+        create_an_account_page.choose_birthdate(TestData.birthdate)
 
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć
