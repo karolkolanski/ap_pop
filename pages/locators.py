@@ -23,3 +23,5 @@ class CreateAnAccountPageLocators():
     EMAIL = (By.ID, "email")
     PASSWORD = (By.ID, "passwd")
     BIRTHDATE_DAY = (By.ID, "days")
+    BIRTHDATE_MONTH = (By.ID, "months")
+    BIRTHDATE_YEAR = (By.ID, "years")

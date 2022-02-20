@@ -39,12 +39,22 @@ class CreateAnAccountPage(BasePage):
         password_input.send_keys(password)
 
     def choose_birthdate(self, date):
+        # date = "1980-02-30"
         date_splitted = date.split("-")
-        year = date_splitted[0]
-        month = date_splitted[1]
-        day = date_splitted[2]
+        # date_splitted = ["1980", "02", "30"]
+        year = date_splitted[0]    # "1980"
+        month = str(int(date_splitted[1]))   # "02" => "2"
+        day = date_splitted[2]     # "30"
+        # Tworzymy instancję klasy Select
+        # Ta klasa przyjmuje w inicjalizatorze WebElement
+        # Służy do obsługi list wybieralnych
+        # vide "Selenium ściąga" str. 8
         day_select = Select(self.driver.find_element(*CreateAnAccountPageLocators.BIRTHDATE_DAY))
         day_select.select_by_value(day)
+        month_select = Select(self.driver.find_element(*CreateAnAccountPageLocators.BIRTHDATE_MONTH))
+        month_select.select_by_value(month)
+        year_select = Select(self.driver.find_element(*CreateAnAccountPageLocators.BIRTHDATE_YEAR))
+        year_select.select_by_value(year)
 
 
     def get_email(self):

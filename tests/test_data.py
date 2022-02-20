@@ -3,4 +3,4 @@ class TestData:
     gender = "male"
     last_name = "Nowak"
     password = "password123"
-    birthdate = "1985-01-20"
+    birthdate = "1980-02-30"
