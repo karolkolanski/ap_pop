@@ -6,6 +6,13 @@ class RegistrationTest(BaseTest):
     """
     Registration Tests
     """
+    def verify_errors(self, errors):
+        """
+        Verifies errors displayed for the user
+        verify_errors(["firstname is required"])
+        """
+        pass
+
     def test_no_name(self):
         home_page = self.home_page
         # 1. Kliknij Sign In
@@ -28,12 +35,19 @@ class RegistrationTest(BaseTest):
         # 10. Sprawdź pole „Last name”
         self.assertEqual(create_an_account_page.get_last_name(), TestData.last_name)
         # 11. Wpisz adres
+        create_an_account_page.enter_address(TestData.address)
         # 12. Wpisz miasto
+        create_an_account_page.enter_city(TestData.city)
         # 13. Wpisz kod pocztowy
+        create_an_account_page.enter_postal_code(TestData.postal_code)
         # 14. Wybierz stan
+        create_an_account_page.choose_state(TestData.state)
         # 15. Wpisz nr telefonu komórkowego
+        create_an_account_page.enter_mobile_phone(TestData.phone)
         # 16. Wpisz alias adresu
+        create_an_account_page.enter_address_alias(TestData.alias)
         # 17. Kliknij Register
+        create_an_account_page.click_register_btn()
 
 
 
