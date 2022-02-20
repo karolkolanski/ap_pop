@@ -6,7 +6,7 @@ class RegistrationTest(BaseTest):
     """
     Registration Tests
     """
-    def verify_errors(self, errors):
+    def verify_error_messages(self, errors):
         """
         Verifies errors displayed for the user
         verify_errors(["firstname is required"])
@@ -14,6 +14,9 @@ class RegistrationTest(BaseTest):
         pass
 
     def test_no_name(self):
+        """
+        TC 001 : User does not fill the name field
+        """
         home_page = self.home_page
         # 1. Kliknij Sign In
         authentication_page = home_page.click_sign_in()
@@ -48,7 +51,10 @@ class RegistrationTest(BaseTest):
         create_an_account_page.enter_address_alias(TestData.alias)
         # 17. Kliknij Register
         create_an_account_page.click_register_btn()
-
+        # Oczekiwany rezultat:
+        # 1. Użytkownik otrzymuje komunikat „firstname is required”
+        errors = ["firstname is required."]
+        self.assertCountEqual(create_an_account_page.get_error_messages_visible_texts(), errors)
 
 
         # Zatrzymaj na chwilę test na końcu, by zdążyć

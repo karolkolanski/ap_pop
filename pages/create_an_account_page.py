@@ -133,6 +133,26 @@ class CreateAnAccountPage(BasePage):
         el = self.driver.find_element(*CreateAnAccountPageLocators.REGISTER_BTN)
         el.click()
 
+    def get_number_of_errors_visible_text(self):
+        """
+        Returns the message with the number of errors commited by the user
+        """
+        el = self.driver.find_element(*CreateAnAccountPageLocators.NUMBER_OF_ERRORS_MESSAGE)
+        return el.text
+
+    def get_error_messages_visible_texts(self):
+        """
+        Returns all user errors
+        """
+        # Znajduję wszystkie błędy - lista WebElementów
+        errors = self.driver.find_elements(*CreateAnAccountPageLocators.ERROR_MESSAGES)
+        error_texts = []
+        # Iteruję po liście webelementów
+        for e in errors:
+            # Dodaję do listy widoczny tekst
+            error_texts.append(e.text)
+        return error_texts
+
 
 
     def _verify_page(self):

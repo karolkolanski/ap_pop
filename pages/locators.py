@@ -35,3 +35,5 @@ class CreateAnAccountPageLocators():
     MOBILE_PHONE = (By.ID, "phone_mobile")
     ADDRESS_ALIAS = (By.ID, "alias")
     REGISTER_BTN = (By.ID, "submitAccount")
+    NUMBER_OF_ERRORS_MESSAGE = (By.XPATH, '//div[@class="alert alert-danger"]/p')
+    ERROR_MESSAGES = (By.XPATH, '//div[@class="alert alert-danger"]/ol/li')
