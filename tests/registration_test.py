@@ -1,6 +1,6 @@
 from tests.base_test import BaseTest
-from tests.test_data import TestData
 from time import sleep
+import unittest
 
 class RegistrationTest(BaseTest):
     """

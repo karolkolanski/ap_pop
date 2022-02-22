@@ -27,6 +27,7 @@ class CreateAnAccountPage(BasePage):
         Enters last name
         """
         el = self.driver.find_element(*CreateAnAccountPageLocators.LAST_NAME)
+        el.click()
         el.send_keys(last_name)
 
     def enter_password(self, password):
@@ -35,6 +36,7 @@ class CreateAnAccountPage(BasePage):
         """
         # Znajdź pole
         password_input = self.driver.find_element(*CreateAnAccountPageLocators.PASSWORD)
+        password_input.click()
         # Wpisz w to pole podane hasło
         password_input.send_keys(password)
 
@@ -68,7 +70,7 @@ class CreateAnAccountPage(BasePage):
         # date_splitted = ["1980", "02", "28"]
         year = date_splitted[0]    # "1980"
         month = str(int(date_splitted[1]))   # "02" => "2"
-        day = date_splitted[2]     # "28"
+        day = str(int(date_splitted[2]))    # "28"
         # Tworzymy instancję klasy Select
         # Ta klasa przyjmuje w inicjalizatorze WebElement
         # Służy do obsługi list wybieralnych
